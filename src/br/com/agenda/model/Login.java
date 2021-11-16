@@ -19,6 +19,12 @@ public class Login {
 		this.login = login;
 		this.senha = senha;
 	}
+	
+	public Login(int id, String login, String senha) {
+		this.id = id;
+		this.login = login;
+		this.senha = senha;
+	}
 
 	public int getId() {
 		return id;

@@ -1,5 +1,6 @@
 package br.com.agenda.model;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class Evento {
@@ -7,19 +8,20 @@ public class Evento {
 	private int id; 
 	private String titulo; 
 	private String descricao; 
-	private Date data_evento; 
-	private Date data_criacao; 
+	private Calendar data_evento; 
+	private Calendar data_criacao; 
+	private String local; 
+	private Login login; 
 	
-	public Evento() { 
-		
-	}
-
-	public Evento(String titulo, String descricao, Date data_evento, Date data_criacao) {
+	
+	public Evento() {
 		this.id = id; 
 		this.titulo = titulo;
 		this.descricao = descricao;
 		this.data_evento = data_evento;
 		this.data_criacao = data_criacao;
+		this.login = login;
+		this.local = local; 
 	}
 
 	public int getId() {
@@ -46,20 +48,32 @@ public class Evento {
 		this.descricao = descricao;
 	}
 
-	public Date getData_evento() {
+	public Calendar getData_evento() {
 		return data_evento;
 	}
 
-	public void setData_evento(Date data_evento) {
+	public void setData_evento(Calendar data_evento) {
 		this.data_evento = data_evento;
 	}
 
-	public Date getData_criacao() {
+	public Calendar getData_criacao() {
 		return data_criacao;
 	}
 
-	public void setData_criacao(Date data_criacao) {
+	public void setData_criacao(Calendar data_criacao) {
 		this.data_criacao = data_criacao;
+	}
+	
+	public String getLocal() {
+		return local;
+	}
+
+	public void setLocal(String local) {
+		this.local = local;
+	}
+
+	public Login getLogin() {
+		return login;
 	}
 		
 }
